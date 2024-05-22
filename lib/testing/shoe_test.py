@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from shoe import Shoe
-
 import io
 import sys
 
@@ -31,12 +30,9 @@ class TestShoe:
         stan_smith.cobble()
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "Your shoe is as good as new!\n")
-    
+
     def test_cobble_makes_new(self):
         '''creates an attribute on the instance called 'condition' and set equal to 'New' after repair.'''
         stan_smith = Shoe("Adidas", 9)
         stan_smith.cobble()
         assert(stan_smith.condition == "New")
-        
-        
-   
